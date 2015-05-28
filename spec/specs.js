@@ -1,17 +1,21 @@
-describe('wordStorer', function() {
-  it("makes a new hash entry for every word", function() {
-    expect(wordOrder("i am groot")).to.eql(["i am groot"])
+describe('decimator', function() {
+  it("turns binary into decimal", function() {
+    expect(decimator("11", 2)).to.eq(3);
   });
 
-  it("counts the number of times a word appears", function() {
-    expect(wordOrder("i am groot groot groot")).to.eql(["i am groot"])
+  it("turns binary into decimal", function() {
+    expect(decimator("100", 2)).to.eq(4);
   });
 
-  it("sorts things", function() {
-    expect(wordOrder("i am groot groot groot")).to.eql("groot, 3. i, 1. am, 1.")
+  it("turns binary into decimal", function() {
+    expect(decimator("100100", 2)).to.eq(36);
   });
 
-  it("sorts things", function() {
-    expect(wordOrder("i i i i i  a k groot groot groot groot")).to.equal(["i 5", "groot 4", "a 1", "i 1"])
+  it("turns any kind of number into decimal", function() {
+    expect(decimator("22", 3)).to.eq(8);
+  });
+
+  it("turns any kind of number into decimal", function() {
+    expect(decimator("1235", 8)).to.eq(669);
   });
 });
