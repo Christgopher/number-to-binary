@@ -18,4 +18,8 @@ describe('decimator', function() {
   it("turns any kind of number into decimal", function() {
     expect(decimator("1235", 8)).to.eq(669);
   });
+
+  it("turns any kind of number into decimal", function() {
+    expect(decimator("2AF3", 16)).to.eq(10995);
+  });
 });
